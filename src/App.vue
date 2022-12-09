@@ -1,18 +1,7 @@
 <script setup>
-import HomePage from './components/HomePage.vue'
-
+import SceneBoard from "./components/game_scene/SceneBoard.vue";
 </script>
 
 <template>
-  <header>
-    <h1>PF23</h1>
-  </header>
-
-  <main>
-    <HomePage />
-  </main>
+  <SceneBoard />
 </template>
-
-<style scoped>
-  
-</style>
