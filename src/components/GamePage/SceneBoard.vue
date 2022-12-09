@@ -2,6 +2,8 @@
 import { onMounted, onUnmounted, reactive, ref } from "vue";
 import UserFigure from "./UserFigure.vue";
 
+defineProps(["app"]);
+
 const boardRef = ref(null);
 const resizeObserver = ref(null);
 
@@ -65,7 +67,7 @@ onUnmounted(() => {
 <template>
   <div
     ref="boardRef"
-    class="h-100 w-100 overflow-hidden bg-black d-flex justify-content-center align-items-center"
+    class="h-100 w-100 d-flex justify-content-center align-items-center"
   >
     <div
       :style="{
