@@ -4,8 +4,8 @@ const props = defineProps(["app"]);
 
 <template>
   <div>
-    <h1 class="text-white">home</h1>
+    <h1 class="text-white">result</h1>
     <br />
-    <button @click="props.app.actions.startNewGame">zacni</button>
+    <button @click="props.app.actions.goToHome">zacni znovu</button>
   </div>
 </template>
