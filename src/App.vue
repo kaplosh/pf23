@@ -1,18 +1,9 @@
 <script setup>
-import HomePage from './components/HomePage.vue'
-
+import GamePage from "./components/GamePage2.vue";
 </script>
 
 <template>
-  <header>
-    <h1>PF23</h1>
-  </header>
-
-  <main>
-    <HomePage />
-  </main>
+  <GamePage />
 </template>
 
-<style scoped>
-  
-</style>
+<style scoped></style>
