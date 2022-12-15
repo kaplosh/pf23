@@ -18,7 +18,7 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div class="page">
     <name-input-form @select="onBegin" />
   </div>
 </template>
