@@ -33,16 +33,19 @@ function finishGame() {
     <div class="text-white d-flex align-items-center">
       <h1 class="text-center flex-fill">HRA</h1>
       <div class="m-2">
-        <button @click="app.actions.toggleSceneMenu">MENU</button>
+        <button @click="props.app.actions.toggleSceneMenu">MENU</button>
       </div>
     </div>
     <div
-      v-if="app.sceneMenuShown"
+      v-if="props.app.sceneMenuShown"
       class="flex-fill d-flex justify-content-center align-items-center"
     >
       <SceneMenu :app="app" />
     </div>
-    <div v-if="!app.sceneMenuShown" class="d-flex justify-content-between">
+    <div
+      v-if="!props.app.sceneMenuShown"
+      class="d-flex justify-content-between"
+    >
       <button @click="finishGame">left</button>
       <button>right</button>
     </div>

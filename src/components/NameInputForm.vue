@@ -4,20 +4,19 @@ const bannedNames = ["anna", "petra"];
 export default {
   data() {
     return {
-      nameInput: "",
       errorMSg: null,
     };
   },
 
   methods: {
-    createPlayer() {
-      const name = this.nameInput.trim();
-      //console.log(name.toLowerCase());
+    onInput(event) {
+      const name = event.target.value.trim();
       if (bannedNames.includes(name.toLowerCase())) {
         this.errorMSg = "Tohle není validní jméno..";
+        this.$emit("set", "");
       } else {
         this.errorMSg = null;
-        this.$emit("select", name);
+        this.$emit("set", name);
       }
     },
   },
@@ -25,10 +24,8 @@ export default {
 </script>
 
 <template>
-  <div>
-    <h3>Negře</h3>
-    <input v-model="nameInput" placeholder="Napiš své jméno.." />
-    <button @click="createPlayer">Vytvoř se</button>
+  <div class="form-outline form-white">
+    <input @input="onInput" placeholder="Napiš své jméno.." />
     <div v-if="errorMSg !== null">{{ errorMSg }}</div>
   </div>
 </template>

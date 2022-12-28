@@ -9,7 +9,13 @@ const app = reactive({
   sceneMenuShown: false,
   playerName: "",
   result: {
-    text: "not-clean",
+    values: {
+      sym1: 0,
+      sym2: 0,
+      sym3: 0,
+      sym4: 0,
+    },
+    //text: "not-clean",
   },
 
   actions: Object.freeze({
